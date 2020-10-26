@@ -80,14 +80,14 @@ analytics:
 author:
   name: 'Brandon Cabrera'
   avatar: 'profile.jpg'
-  CV: 'http://bcmarquez.com/cv/'
-  Projects: 'http://bcmarquez.com/projects/'
-  bio:
+  cv: 'http://bcmarquez.com/cv/'
+  projects: 'http://bcmarquez.com/projects/'
+  bio: 'HI'
   location:
   employer:
   pubmed:
   googlescholar:
-  email:
+  email: 'bcmarquez150@gmail.com  '
   researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
   uri:
   bitbucket:
@@ -102,7 +102,7 @@ author:
   instagram:
   impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm:
-  linkedin:
+  linkedin: 'https://www.linkedin.com/in/bcmarquez/'
   orcid:
   pinterest:
   soundcloud:
@@ -115,6 +115,7 @@ author:
   xing:
   youtube:
   wikipedia:
+  phone: '310-874-9794'
 
 # Reading Files
 include:
