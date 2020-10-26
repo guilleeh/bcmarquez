@@ -11,7 +11,7 @@ redirect_from:
 
 <h3>Systematic Compositionality in Recurrent Neural Networks (RNNs)</h3>
 
-<iframe src="https://drive.google.com/file/d/1q3TkpWlv7rAjm44MOwBaDaBxAyD10CrU/preview" width="100%" height="500px"></iframe>
+<iframe src="https://drive.google.com/file/d/1q3TkpWlv7rAjm44MOwBaDaBxAyD10CrU/preview" width="100%" height="500px" frameBorder="0"></iframe>
 
 <br>
 <hr>
@@ -19,4 +19,4 @@ redirect_from:
 
 <h3 id="#model">Statistical Language Model</h3>
 
-<iframe src="https://drive.google.com/file/d/1s489urbrMk3hRx-fxgARpB-UIAge7rrU/preview" width="100%" height="500px"></iframe>
+<iframe src="https://drive.google.com/file/d/1s489urbrMk3hRx-fxgARpB-UIAge7rrU/preview" width="100%" height="500px" frameBorder="0"></iframe>
