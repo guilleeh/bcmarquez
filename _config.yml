@@ -7,9 +7,9 @@
 
 # Site Settings
 locale: 'en-US'
-title: 'Brandon Cabrera'
+title: 'Brandon Cabrera Marquez'
 title_separator: '-'
-name: &name 'Brandon Cabrera'
+name: &name 'Brandon Cabrera Marquez'
 description: &description 'Personal Website'
 url: 'http://bcmarquez.com' # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl: '' # the subpath of your site, e.g. "/blog"
@@ -78,18 +78,15 @@ analytics:
 
 # Site Author
 author:
-  name: 'Brandon Cabrera'
+  name: 'Brandon Cabrera Marquez'
   avatar: 'profile.jpg'
-  cv: 'http://bcmarquez.com/cv/'
-  projects: 'http://bcmarquez.com/projects/'
-  bio: 'HI'
+  bio: ' '
   location:
   employer:
   pubmed:
   googlescholar:
   email: 'bcmarquez150@gmail.com  '
   researchgate: # example: "https://www.researchgate.net/profile/yourprofile"
-  uri:
   bitbucket:
   codepen:
   dribbble:
@@ -102,7 +99,7 @@ author:
   instagram:
   impactstory: #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm:
-  linkedin: 'https://www.linkedin.com/in/bcmarquez/'
+  linkedin: 'bcmarquez  '
   orcid:
   pinterest:
   soundcloud:
