@@ -299,12 +299,12 @@ I am a recent professional with applied experience in natural language processin
       },
       function(data,status){
 
-        spinner.hide()
-        var { common, likes, weekly, tweet, user_image, username } = data
+        spinner.hide();
+        const { common, likes, weekly, tweet, user_image, username } = data;
 
         // Set variables
-        $('#username').text(username)
-        $('#posttweetta').text(tweet)
+        $('#username').text(username);
+        $('#posttweetta').text(tweet);
         $("#user_image").attr("src",user_image);
         //$("#viz-1").append($(weekly));
         Bokeh.embed.embed_item(weekly, 'viz-1');
@@ -313,7 +313,7 @@ I am a recent professional with applied experience in natural language processin
 
       }).fail(function () {
         $('#error').removeAttr('hidden');
-        spinner.hide()
+        spinner.hide();
       });
     })
   </script>
