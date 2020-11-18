@@ -25,11 +25,9 @@
       spinner.hide();
       const { common, likes, weekly, tweet, user_image, username } = data;
 
-      // Set variables
       $('#username').text(username);
       $('#posttweetta').text(tweet);
       $("#user_image").attr("src",user_image);
-      //$("#viz-1").append($(weekly));
       Bokeh.embed.embed_item(weekly, 'viz-1');
       Bokeh.embed.embed_item(likes, 'viz-2');
       Bokeh.embed.embed_item(common, 'viz-2');
