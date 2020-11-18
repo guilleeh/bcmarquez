@@ -278,7 +278,7 @@ I am a recent professional with applied experience in natural language processin
     </div>
   </body>
   <script>
-    const spinner = $('#spinner');
+    var spinner = $('#spinner');
     spinner.hide();
 
     $("#form").submit((event) => {
@@ -291,7 +291,7 @@ I am a recent professional with applied experience in natural language processin
       $('#username').text('twitter_user');
       $('#posttweetta').text('generated tweet will appear here!');
       $("#user_image").attr("src",'https://i.ibb.co/G9zrm5H/122657298-360495028614575-7504740335572652880-n.png');
-      const username = $("#input").val();
+      var username = $("#input").val();
       $.post("https://bcmarquez-twitter-ml.herokuapp.com/api/v0/tweet-generator",
       {
         timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
@@ -300,7 +300,7 @@ I am a recent professional with applied experience in natural language processin
       function(data,status){
 
         spinner.hide()
-        const { common, likes, weekly, tweet, user_image, username } = data
+        var { common, likes, weekly, tweet, user_image, username } = data
 
         // Set variables
         $('#username').text(username)
