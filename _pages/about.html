@@ -279,28 +279,12 @@ I am a recent professional with applied experience in natural language processin
   </body>
   <script>
     const spinner = $('#spinner');
-    spinner.hide()
-
-    $("#gen_tweet").on( "click", function() {
-      const input = $('#input');
-      if(input.val()) {
-        spinner.show()
-        $('#tweet').hide()
-      }
-    });
-
-    $("#input").on( "enter", function() {
-      const input = $('#input');
-      if(input.val()) {
-        spinner.show()
-        $('#tweet').hide()
-      }
-    });
-
-    var hiddeninput = $("#timezone").val(Intl.DateTimeFormat().resolvedOptions().timeZone);
+    spinner.hide();
 
     $("#form").submit((event) => {
+
       event.preventDefault() 
+      spinner.show()
       $("#error").attr('hidden',true)
       $("#viz-1").empty();
       $("#viz-2").empty();
