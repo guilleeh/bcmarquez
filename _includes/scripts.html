@@ -4,6 +4,9 @@
   var spinner = $('#spinner');
   spinner.hide();
 
+  $.get( "https://bcmarquez-twitter-ml.herokuapp.com/api/v0/ping", function( data ) {
+  });
+
   $("#form").submit((event) => {
 
     event.preventDefault();
