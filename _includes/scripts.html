@@ -4,40 +4,46 @@
   var spinner = $('#spinner');
   spinner.hide();
 
-  $.get( "https://bcmarquez-twitter-ml.herokuapp.com/api/v0/ping", function( data ) {
+  $.get("https://bcmarquez-twitter-ml.herokuapp.com/api/v0/ping", function (data) {
   });
 
   $("#form").submit((event) => {
 
     event.preventDefault();
     spinner.show();
-    $("#error").attr('hidden',true);
+    $("#error").attr('hidden', true);
     $("#viz-1").empty();
     $("#viz-2").empty();
     $('#username').text('twitter_user');
     $('#posttweetta').text('generated tweet will appear here!');
-    $("#user_image").attr("src",'https://i.ibb.co/G9zrm5H/122657298-360495028614575-7504740335572652880-n.png');
+    $("#user_image").attr("src", 'https://i.ibb.co/G9zrm5H/122657298-360495028614575-7504740335572652880-n.png');
     var username = $("#input").val();
     $.post("https://bcmarquez-twitter-ml.herokuapp.com/api/v0/tweet-generator",
-    {
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-      username: username
-    },
-    function(data,status){
+      {
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        username: username
+      },
+      function (data, status) {
 
-      spinner.hide();
-      const { common, likes, weekly, tweet, user_image, username } = data;
+        spinner.hide();
+        const { common, likes, weekly, tweet, user_image, username } = data;
 
-      $('#username').text(username);
-      $('#posttweetta').text(tweet);
-      $("#user_image").attr("src",user_image);
-      Bokeh.embed.embed_item(weekly, 'viz-1');
-      Bokeh.embed.embed_item(likes, 'viz-2');
-      Bokeh.embed.embed_item(common, 'viz-2');
+        $('#username').text(username);
+        $('#posttweetta').text(tweet);
+        $("#user_image").attr("src", user_image);
+        Bokeh.embed.embed_item(weekly, 'viz-1');
+        Bokeh.embed.embed_item(likes, 'viz-2');
+        Bokeh.embed.embed_item(common, 'viz-2');
 
-    }).fail(function () {
-      $('#error').removeAttr('hidden');
-      spinner.hide();
-    });
+      }).fail(function (jqXHR, textStatus) {
+        try {
+          const error = jqXHR.responseJSON.Error
+          $('#error').text(error)
+        } catch {
+          $('#error').text("There was a problem generating your tweet.")
+        }
+        $('#error').removeAttr('hidden');
+        spinner.hide();
+      });
   });
 </script>
