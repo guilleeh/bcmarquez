@@ -4,46 +4,62 @@ title: 'About Me'
 excerpt: 'About me'
 author_profile: true
 redirect_from:
-  - /about/
-  - /about.html
+- /about/
+- /about.html
 ---
 
-I am a recent professional with applied experience in natural language processing and data engineering. I have 6 consistent years of coding in Python and utilize it for writing algorithms, visualizing data, performing statistical analysis, and implementing machine learning models. Below you can view an interactive sample of the skills mentioned via my Tweet Generator. If you’re interested in learning more about me and my abilities, you’re welcome to view my resume and project write-ups via the tabs.
+I am a recent professional with applied experience in natural language processing and data engineering.
+I have 6 consistent years of coding in Python and utilize it for writing algorithms, visualizing data, performing
+statistical analysis,
+and implementing machine learning models. Below you can view an interactive sample of the skills mentioned via my Tweet
+Generator.
+If you’re interested in learning more about me and my abilities, you’re welcome to view my resume and project write-ups
+via the tabs.
 
 <hr>
-    <div>
-    <div class=" h-100 w-100">
-      <div class='d-block'>
-        <div id='error' class="alert alert-danger" role="alert" hidden>
-          There was an error generating your tweet
+<div>
+  <div class=" h-100 w-100">
+    <div class='d-block'>
+      <div id='error' class="alert alert-danger" role="alert" hidden>
+        There was an error generating your tweet
+      </div>
+      <h1 class="d-block pb-2">Tweet Generator</h1>
+      <p>
+        This is an interactive version of my <a href='/projects/'>Statistical Language Model</a> project. Enter your
+        Twitter username below to
+        generate a tweet using your own data!
+      </p>
+      <form method='post' class="form-inline" id='form'>
+        <div class="input-group mb-3 mx-sm-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">@</span>
+          </div>
+          <input id="input" style="border-radius: 0 .25rem .25rem 0; box-shadow: none;" type="text" class="form-control"
+            id="username" name='username' placeholder="twitter_user" aria-describedby="basic-addon1" required>
+          <input id="timezone" name='timezone' hidden>
         </div>
-        <h1 class="d-block pb-2">Tweet Generator</h1>
-        <form method='post' class="form-inline" id='form'>
-          <div class="form-group mx-sm-3 mb-2">
-            <label for="username" class="sr-only">Twitter Username</label>
-            <input id="input" type="text" class="form-control" id="username" name='username' placeholder="Twitter Username" required>
-            <input id="timezone" name='timezone' hidden>
-          </div>
-          <button id='gen_tweet' type="submit" class="btn btn-primary mb-2">Generate Tweet</button>
-          <div id='spinner' class="spinner-border text-primary" role="status" style='margin: 0 0 10px 25px;'>
-            <span class="sr-only">Loading...</span>
-          </div>
-        </form> 
-        <div class='d-flex align-items-center'>
-          <h6>Generated tweet:</h6>
-        </div>  
-        <div class="posttweetcontainer">
-        <img id='user_image' class="posttweetprofimg" src="https://i.ibb.co/G9zrm5H/122657298-360495028614575-7504740335572652880-n.png">
-          <div class="ml56px">
-            <div class="posttweettacontainer" style='height: auto; max-width: 500px; min-height: 50px;'>
-              <p style='height: auto;' id="posttweetta" class="posttweetta" placeholder="What's happening?" style="margin-top: 0;">generated tweet will appear here!</p>
-              <p style="text-align: right; margin-bottom: 0;">- @<span id='username'>twitter_user</span></p>
-            </div>
+        <button id='gen_tweet' type="submit" class="btn btn-primary mb-3">Generate Tweet</button>
+        <div id='spinner' class="spinner-border text-primary" role="status" style='margin: 0 0 10px 25px;'>
+          <span class="sr-only">Loading...</span>
+        </div>
+      </form>
+      <div class='d-flex align-items-center'>
+        <h6>Generated tweet:</h6>
+      </div>
+      <div class="posttweetcontainer">
+        <img id='user_image' class="posttweetprofimg"
+          src="https://i.ibb.co/G9zrm5H/122657298-360495028614575-7504740335572652880-n.png">
+        <div class="ml56px">
+          <div class="posttweettacontainer" style='height: auto; max-width: 500px; min-height: 50px;'>
+            <p style='height: auto;' id="posttweetta" class="posttweetta" placeholder="What's happening?"
+              style="margin-top: 0;">generated tweet will appear here.</p>
+            <p style="text-align: right; margin-bottom: 0;">- @<span id='username'>twitter_user</span></p>
           </div>
         </div>
-          <div id='viz-1' class='viz'> 
-          </div>
-          <div id='viz-2' class='d-flex'>
-          </div>         
+      </div>
+      <div id='viz-1' class='viz'>
+      </div>
+      <div id='viz-2' class='d-flex'>
       </div>
     </div>
+  </div>
