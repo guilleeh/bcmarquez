@@ -41,7 +41,8 @@
           $('#error').text(error);
         } catch {
           $('#error').text("There was a problem generating your tweet.");
-        }
+        };
+
         $('#error').removeAttr('hidden');
         spinner.hide();
       });
